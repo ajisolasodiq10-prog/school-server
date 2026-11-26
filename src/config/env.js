@@ -71,7 +71,7 @@ export const config = {
   accountService: {
     url: accountServiceUrl,
     apiKey: accountApiKey,
-    timeoutMs: int('ACCOUNT_SERVICE_TIMEOUT_MS', 5000, { min: 500, max: 60000 }),
+    timeoutMs: int('ACCOUNT_SERVICE_TIMEOUT_MS', 5000, { min: 500, max: 180000 }),
     // Extra tries for READ calls only. Writes carry an idempotency key and are not retried blindly.
     readRetries: int('ACCOUNT_SERVICE_READ_RETRIES', 1, { min: 0, max: 3 }),
     // How long a "this account is active" answer may be reused (seconds). 0 = ask on every request.
